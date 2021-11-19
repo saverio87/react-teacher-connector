@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://sav87:c5h11cok@teachersconnector.2iyge.mongodb.net/TeachersConnector?retryWrites=true&w=majority",
+  "jwtToken": "mysecrettoken",
+  "githubClientId":"0c42bcf4c1061ff75c92",
+  "githubSecret":"5989ac5108e2c397d702e95a946e461c7f62935e"
+}
