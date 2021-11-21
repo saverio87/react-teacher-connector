@@ -6,7 +6,6 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../../models/User");
 const gravatar = require("gravatar");
-const normalize = require("normalize-url");
 
 // @route  POST api/users
 // @desc   Register user
@@ -43,14 +42,8 @@ router.post(
 
       // Get users gravatar
 
-      const avatar = normalize(
-        gravatar.url(email, {
-          s: "200",
-          r: "pg",
-          d: "mm",
-        }),
-        { forceHttps: true }
-      );
+      const avatar =
+        "https://www.pngall.com/wp-content/uploads/5/Profile-PNG-Clipart.png";
 
       user = new User({
         name: name,
