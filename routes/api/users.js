@@ -6,7 +6,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../../models/User");
 const gravatar = require("gravatar");
-const normalize = require("normalize-url");
+//const normalize = require("normalize-url");
+import normalizeUrl from "normalize-url";
 
 // @route  POST api/users
 // @desc   Register user
@@ -43,7 +44,7 @@ router.post(
 
       // Get users gravatar
 
-      const avatar = normalize(
+      const avatar = normalizeUrl(
         gravatar.url(email, {
           s: "200",
           r: "pg",
