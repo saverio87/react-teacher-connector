@@ -1,35 +1,21 @@
 import React from "react";
 import { ReviewAccordion } from "../reviews/ReviewAccordion";
-import styled from "styled-components";
+
 import ProfileImage from "../layout/ProfileImage";
-import { Link } from "react-router-dom";
+
 import { connect } from "react-redux";
 import { addLike, removeLike, deletePost } from "../../actions/post";
 import {
   DangerButton,
   PlainLink,
   PrimaryButton,
-  SecondaryButton,
   StyledLink,
 } from "../../utils/styledComponents";
 
 import { Text, PrimaryText } from "../../utils/styledComponents";
 
-import {
-  Badge,
-  Button,
-  Card,
-  Container,
-  Row,
-  Col,
-  Image,
-} from "react-bootstrap";
+import { Button, Card, Container, Row, Col, Image } from "react-bootstrap";
 import formatDate from "../../utils/formatDate";
-
-const StyledButton = styled(Button)`
-  border: 2px solid #41a0b3;
-  color: #41a0b3;
-`;
 
 export const ProfileItemCard = ({
   name,
